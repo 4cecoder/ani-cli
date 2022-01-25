@@ -378,13 +378,13 @@ quality=best
 scrape=query
 download_dir="."
 
-while getopts 'viq:dp:chDUV' OPT; do
+while getopts 'viq:dp:ae:chDUV' OPT; do
 	case $OPT in
 		a)
-			anime_id=
+			anime_id=$OPTARG
 			;;
 		e)
-			episode=
+			episode=$OPTARG
 			;;
 		h)
 			help_text
