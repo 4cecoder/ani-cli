@@ -24,6 +24,8 @@ help_text () {
 	  $0 -h | -D | -U | -V
 
 	Options:
+	  -e prechoose episode number (if you know it)
+	  -a prechoose anime id (if you know it)
 	  -c continue watching anime from history
 	  -h show helptext
 	  -d download episode
@@ -378,6 +380,9 @@ download_dir="."
 
 while getopts 'viq:dp:chDUV' OPT; do
 	case $OPT in
+		e)
+			anime_id=
+			;;
 		h)
 			help_text
 			exit 0
