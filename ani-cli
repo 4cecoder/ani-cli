@@ -198,7 +198,7 @@ anime_selection () {
 
 	# User input
 	printf "$c_blue%s$c_green" "Enter number: "
-	read -r choice
+	#read -r choice
 	printf "$c_reset"
 
 	# Check if input is a number
@@ -387,6 +387,7 @@ while getopts 'viq:dp:ae:chDUV' OPT; do
 			;;
 		e)
 			episode=$OPTARG
+			choice=$OPTARG
 			;;
 		h)
 			help_text
